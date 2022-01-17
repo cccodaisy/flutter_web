@@ -1,3 +1,5 @@
+import 'package:flutter_web/common/args.dart';
+import 'package:flutter_web/screens/screens.dart';
 import 'package:flutter_web/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +38,16 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
             value ? _isHovering[i] = true : _isHovering[i] = false;
           });
         },
-        onTap: () {},
+
+        onTap: () {
+          Navigator.pushNamed(
+            context,
+            GoodsDetailScreen.routeName,
+            arguments: ScreenArguments(
+              i,
+            ),
+          );
+        },
         child: Text(
           items[i],
           style: TextStyle(

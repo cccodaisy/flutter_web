@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomePage.routeName: (context) => HomePage(),
         SamplePage.routeName: (context) => SamplePage(),
-        PhotosHistoryAddPage.routeName: (context) => PhotosHistoryAddPage(),
+        PhotosHistoryAddPage.routeName: (context) => const PhotosHistoryAddPage(),
+        GoodsDetailScreen.routeName: (context) => const GoodsDetailScreen(),
       },
       initialRoute: '/',
     );
